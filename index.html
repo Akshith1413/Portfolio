@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Made by Ravula Akshith -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Raleway:wght@100&display=swap');
+        @font-face { 
+            font-family: 'MyFont'; 
+            src: 
+                url('fonts/penna.otf')  
+                format('opentype');  font-weight: normal; 
+                font-style: normal; 
+        } 
+        ::selection {
+            background: #000;color: #fff;
+        }
+        @font-face { 
+            font-family: 'My'; 
+            src: 
+                url('fonts/Elianto-Regular.ttf')  
+                format('opentype');  font-weight: normal; 
+                font-style: normal; 
+        } 
+        @font-face { 
+            font-family: 'ooh'; 
+            src: 
+                url('fonts/Audrey-Normal.otf')  
+                format('opentype');  font-weight: normal; 
+                font-style: normal; 
+        } 
+        @font-face { 
+            font-family: 'hihihi'; 
+            src: 
+                url('fonts/CeraStencilPRO-Light.ttf')  
+                format('opentype');  font-weight: normal; 
+                font-style: normal; 
+        } 
+        * {
+            margin: 0;padding: 0;box-sizing: border-box;scroll-behavior: smooth;
+        }
+        header {
+            position: fixed;
+            display: flex;justify-content: space-between;z-index: 1;
+            top:0;left: 0;width: 100%;height:80px;backdrop-filter: blur(20px);
+        }
+        header .logo {font-family: MyFont, sans-serif;letter-spacing: 2px;padding: 10px;
+    transition: 0.5s;cursor: pointer;        margin:10px; position: relative;font-size: 2.4em;color: #000;font-weight: 900;
+        }
+        header .logo:hover {
+            font-size: 2.8em;font-weight: 2000;
+        }
+        header .toggle {
+            display: none;visibility: hidden;
+        }
+        header .list {
+            position: relative;margin:10px;
+            display: flex;right: 10%;visibility: visible;
+        }
+        header .list li {list-style-type: none;
+            margin: 10px;margin-left: 20px;margin-right: 20px;
+        }
+        header .list li a {font-weight: 900;display: flex;overflow: hidden;
+            text-decoration: none;color: #000;font-size: 2.2em;font-family: MyFont, sans-serif;
+        }
+        header .list li a:hover {
+            border-bottom:2px solid #000;
+        }
+        header .list li a:hover {
+            animation: chew 1s linear forwards;
+        }
+        @keyframes chew {
+            0% {
+
+            }
+            100% {
+
+            }
+        }
+        .first {
+            position: relative;top: 0;left: 0;background: #fff;width: 100%;height: 100vh;display: flex;justify-content: space-between;overflow: hidden;
+        }
+        .first .one {
+            position: relative;top:0;left: 0;width: 50%;height: 100%;background: #fff;display: flex;justify-content: center;align-items: center;overflow: hidden;
+        }
+        .first .one .text {top: 10%;left: 0;
+            position: relative;max-width: 80%;word-wrap: break-word;padding: 10px;
+        }
+        .first .one .text h1 {
+            font-family: My, Algerian;font-size: 3.7em;letter-spacing: 2px;
+        }
+        .first .one .text p {
+            font-family: MyFont, sans-serif;padding: 40px 10px;font-size: 2em;font-weight: 900;color: #000;
+        }
+        .first .two {
+            position: relative;top:0;left: 0;width: 50%;height: 100%;background: #000;display: flex;overflow: hidden;
+        }
+        .first .two .imgbo {
+            position: relative;top:0;left: 0;width: 600px;height: 100%;background: #f00;display: flex;justify-content: center;overflow: hidden;
+        }
+        .first .two .imgbo img {position: relative;top: 20%;left: 10px;
+            max-height: 85%;
+        }
+        .second {
+            position: relative;top: 0;left: 0;background: #fff;width: 100%;height: 155vh;display: block;justify-content: space-between;overflow: hidden;
+        }
+        .second .tex {word-wrap: break-word;color: #000;
+            position: relative;margin: 10px;padding: 10px;top:0px;left: 0;width: 100%;height: 25vh;background: #fff;display: block;justify-content: center;overflow: hidden;align-items: center;text-align: center;
+        }
+        .second .tex h1 {
+            font-family: My, Algerian;font-size: 3.7em;letter-spacing: 2px;   
+        }
+        .second .tex p {
+            font-family: MyFont, sans-serif;padding:20px;font-size: 2.2em;font-weight: 900;color: #000;
+         }
+         .second .al {
+            position: relative;top:30px;left: 0;width: 100%;height: 100%;display: flex;justify-content:space-between;overflow: hidden;background: #000;
+         }
+         .second .al .boxes {
+             position: relative;top:0;left: 0;width: 55%;height: 100%;background: #fff;display: flex;overflow: hidden;
+         }
+         .second .al .boxes .er {
+            position: relative;top:0;left: 0;width: 100%;height: 100%;overflow: hidden;
+            display: grid;margin: 5px;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            grid-template-rows: repeat(2, 39%); /* Two rows, each with a height of 100px */
+            gap: 2px;
+         }
+         .second .al .boxes .er .box {
+            position: relative;top:0;left: 0;background: #fff;
+            color: #000;
+            padding: 20px;
+            text-align: center;display: block;overflow: hidden;
+         }
+         .second .al .boxes .er .box img {
+            position: relative;top:0;left: 0;width: 50%;height: 50%;
+         }
+         .second .al .boxes .er .box h5 {font-weight: 600;
+            font-size:2.5em;font-family:MyFont;text-align: center;margin-top: 50px;
+         }
+         .second .al .tick {
+            position: relative;top:0;left:0;width: 45%;height: 100%;background: #fff;display: flex;justify-content: center;overflow: hidden;
+         }
+         .second .al .tick .tess {word-wrap: break-word;max-width: 90%;
+            position: relative;top: 0;left: 0;display: block;
+         }
+         .second .al .tick .tess h1 {
+            text-align: center;font-size: 3em;font-family:MyFont;margin: 10px;padding: 10px;
+         }
+         .second .al .tick .tess p {
+            text-align: center;font-size: 2.2em;font-family:MyFont;margin: 10px;padding: 10px;font-weight: 600;
+         }
+         .second .al .boxes .er .box:hover {
+            border: 3px solid #000;box-shadow: 0 0 25px #000;border-radius: 5px;
+         }
+         .third {
+             position: relative;top: 20px;left: 0;background: #fff;width: 100%;height: 100%;display: block;overflow: hidden;
+         }
+         .third .one {
+            position: relative;top:0;left: 0;width: 100%;margin: 10px;padding: 10px;font-size: 4em;
+            font-family: 'My';text-align: center;transition: 0.5s;
+         }
+         .third .one:hover::before {animation: thir 1s linear forwards;
+            content: '';position: absolute;bottom: 0;width: 50%;height: 5px;background: #000;
+         }
+         @keyframes thir {
+            0% {
+                right: 0;
+            }
+            100% {
+                right: 30%;
+            }
+         }
+         .third .thirdra {
+            position: relative;top: 30px;left: 0;width: 100%;height: 100%;background: #fff;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+            gap: 40px;
+            padding: 10px;
+         }
+         .third .thirdra .no {transition: 0.5s;
+            background-color: #fff;
+            color: #000;height: 485px;justify-content: center;
+            text-align: center;display: block;overflow: hidden;cursor: pointer;
+         }
+         .third .thirdra .no:hover {
+            transform: scale(1.04);
+         }
+         .third .thirdra .no img {
+            position: relative;top: 0;left: 0;width: 100%;height: 80%;display: flex;overflow: hidden;
+         }
+         .third .thirdra .no .shew {font-size: 3em;font-family: MyFont;font-weight: 900;padding: 10px;
+            position: relative;top:0;left: 0;width: 100%;height: 100%;display: flex;justify-content: center;overflow: hidden;
+         }
+         .fourth {
+             position: relative;top: 20vh;left: 0;background: #fff;width: 100%;height: 100%;display: block;overflow: hidden;
+         }
+         .fourth .fori {transition: 0.5s;cursor: pointer;
+            position: relative;top: 0;left: 0;width: 100%;font-size: 3em;font-family: My;text-align: center;
+         }
+         .fourth .fori:hover {
+            letter-spacing: 10px;
+         }
+         .fourth .conti {
+            position: relative;top: 0;left: 0;width: 100%;height: 100%;background: #fff;display: flex;
+            justify-content: space-between;overflow: hidden;
+         }
+         .fourth .conti .cond {
+            position: relative;top:0;left: 0;width: 50%;height: 100%;background: #fff;display: block;overflow: hidden;
+         }
+         .fourth .conti .cond h1 {position: relative;
+            text-align: center;font-size: 3em;margin: 10px;padding: 10px;font-family: MyFont;font-style: italic;margin-bottom: 60px;padding-bottom: 20px;
+         }
+         .fourth .conti .cond .pi{
+            position: relative;top: 0;left: 0;width: 100%;height: 100%;background: #fff;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            padding: 10px;
+         }
+         .fourth .conti .cond .ope {position: relative;display: block;
+            background-color: #fff;transition: 0.5s;
+            color: #000;height: 300px;justify-content: center;align-items: center;
+            text-align: center;overflow: hidden;cursor: pointer;
+         }
+         .fourth .conti .cond .pi .ope .pp {margin: 10px;border: 2px solid #000;
+            position: relative;top: 0;left: 0;width: 200px;height: 200px;background: #ff0;border-radius: 50%;margin-left: 50px;
+            display: flex;justify-content: center;align-items: center;overflow: hidden;
+         }
+         .fourth .conti .cond .pi .ope .pp img {
+            position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;
+         }
+         .fourth .conti .cond .pi .ope p {transition: 0.5s;
+            position: relative;font-size: 2em;font-family: MyFont;font-weight: 900;
+         }
+         .fourth .conti .cond .ope:hover{
+            transform: scale(1.1);
+         }
+         .fourth .conti .cond .ope:hover .pp {
+            box-shadow: 0 0 20px #000;
+         }
+         .fourth .conti .cond .ope:hover p {
+            letter-spacing: 5px;
+         }
+         .fourth .conti .mis {
+            position: relative;top:0;left: 0;width: 50%;height: 100%;background: #fff;display: block;overflow: hidden;
+         }
+         .fourth .conti .mis .po {
+            position: relative;top: 30px;left: 0;width: 100%;text-align: center;height:200px;background: #fff;display: flex;justify-content: center;align-items: center;overflow: hidden;
+         }
+         .fourth .conti .mis .po .signup {cursor: pointer;
+            font-size: 3em;font-family: ooh;font-weight: 400;padding: 10px;margin: 10px;
+         }
+         .fourth .conti .mis .po .signin {cursor: pointer;
+            font-size: 3em;font-family: ooh;font-weight: 400;padding: 10px;margin: 10px;
+         }
+         .fourth .conti .mis .po .y {
+            font-size: 5em;
+         }
+         .fourth .conti .mis .ou {background: #fff;display: none;visibility: hidden;
+            position: relative;top: 0;left: 0;width: 100%;height: 100%;
+            /*display: flex;*/justify-content: center;overflow: hidden;transition: 0.5s;
+         }
+         .fourth .conti .mis .ou form {
+            position: relative;
+	width: 80%;top: 10px;left: 0;
+	height: 100%;
+	background: #fff;margin: 10px;
+	display: flex;flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	transition: 0.5s;
+         }
+         .fourth .conti .mis .ou form input {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            background: #f5f5f5;
+            color: #333;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            margin: 8px 0;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
+        .fourth .conti .mis .ou form input[type = "submit"] {position: relative;
+            max-width: 100px;top: 20px;left: 0;
+            background: #677eff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;margin: 10px;padding: 10px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: 0.5s;
+        }
+        .fourth .conti .mis .pu {background: #fff;display: flex;visibility: visible;
+           position: relative;top: 0;left: 0;width: 100%;
+           height: 100%;/*display: flex;*/justify-content: center;
+           transition: 0.5s;
+           overflow: hidden;
+        }
+        .fourth .conti .mis .pu form {
+           position: relative;
+   width: 80%;top: 10px;left: 0;
+   height: 100%;
+   background: #fff;margin: 10px;
+   display: flex;flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   padding: 40px;
+   transition: 0.5s;
+        }
+        .fourth .conti .mis .pu form input {
+           position: relative;
+           width: 100%;
+           padding: 10px;
+           background: #f5f5f5;
+           color: #333;
+           border: none;
+           outline: none;
+           box-shadow: none;
+           margin: 8px 0;
+           font-size: 14px;
+           letter-spacing: 1px;
+           font-weight: 300;
+       }
+       .fourth .conti .mis .pu form input[type = "submit"] {position: relative;
+           max-width: 100px;top: 20px;left: 0;
+           background: #677eff;
+           color: #fff;
+           cursor: pointer;
+           font-size: 14px;margin: 10px;padding: 10px;
+           font-weight: 500;
+           letter-spacing: 1px;
+           transition: 0.5s;
+       }
+       .fourth .conti .mis .ou.active {
+        display: flex;visibility: visible;
+       }
+       .fourth .conti .mis .pu.inactive {
+        display: none;visibility: hidden;
+       }
+       .fifth {
+           position: relative;top: 30vh;left: 0;background: #fff;width: 100%;height: 100%;display: flex;overflow: hidden;flex-wrap: wrap;
+       }
+       .fifth .nova {word-wrap: break-word;text-align: center;
+        position: relative;top: 0;left: 0;width: 248px;height: 300px;margin: 10px;padding: 10px;background: #fff;display: block;overflow: hidden;justify-content: center;
+       }
+       .fifth .nova h1 {
+        color: #000;font-size: 2em;font-family: My;margin: 10px;padding: 10px;
+       }
+       .fifth .nova p {
+        color: #000;font-size: 1.4em;font-family: MyFont;margin: 5px;padding: 10px;font-weight: 900;
+       }
+       .fifth .nova .butt {margin: 10px;padding: 10px;
+        position: relative;display: flex;font-family: MyFont;text-align: center;
+        top: 0;left: 0;width: 150px;height: 60px;overflow: hidden;justify-content: center;
+        text-decoration: none;font-size: 2em;color: #000;background: #479cd4;font-weight: 900;border-radius: 10px;
+       }
+       .fifth .nova .io {border-radius: 50%;
+        position: relative;top: 0;left: 0;width: 200px;height: 200px;background: #f00;display: flex;overflow: hidden;
+       }
+       .fifth .nova .io img {
+        position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;
+       }
+       @media (max-width:990px){
+        .second {
+            width: 100%;
+            height: 100%;
+        }.second .al {
+            top: 0;flex-wrap: wrap;
+        }.second .al .boxes {
+            width: 100%;
+        }.second .al .tick {
+            width: 100%;
+        }.second .al .boxes .er .box img {
+            width: 150px;
+            height: 150px;
+        }.second .al .boxes .er .box h5 {
+            padding: 50px;
+            margin: 30px;
+        }.second .al .boxes .er .box {
+            width: 90%;
+            height: 100%;
+            padding: 20px;
+            margin: 30px;
+        }
+       }/*Made by Ravula Akshith*/
+       @media (max-width:705px) {
+            .first {
+                height: 150vh;
+            }
+            .first .two .imgbo img {
+                left: 30%;
+            }
+            header .toggle {position: relative;top:0;left: 0;width: 60px;height: 60px;background:transparent;
+                display: block;visibility: visible;overflow: hidden;align-items: center;
+            }
+            header .toggle span {margin: 6px;display: block;border-radius: 4px;
+                position: relative;top: 20px;left: 0;width:40px;height: 3px;background: #000;
+            }
+            header .list {
+                display: none;visibility: hidden;
+            }.fourth .conti {
+                flex-wrap: wrap;}.fourth .conti .cond {
+                    width: 100%;
+                    height: 100%;
+                }.fourth .conti .mis {
+                    width: 100%;
+                    height: 100%;
+                }
+       }
+       .forall.active {
+        display: block;visibility: visible;
+       }
+       .forall.inactive {
+            display: none;visibility: hidden;
+       }
+       .nex.active {position: relative;top: 0;left: 0;width: 100%;height: 100vh;
+        display: flex;
+        justify-content: center;align-items: center;overflow: hidden;
+        visibility: visible;background: #000;
+       }
+       .nex.active .toggle {z-index: 10;border-radius: 50%;backdrop-filter: blur(20px);cursor: pointer;
+        position: absolute;top: 10px;left: 0%;width: 90px;height: 90px;display: flex;justify-content: center;overflow: hidden;
+       }
+       .nex.active .toggle span {margin: 10px;
+        position: relative;top: 20px;left: 0;width: 5px;height:40px;background: #fff;
+       }
+       .nex.active .toggle span:nth-child(1) {
+        transform: rotate(-45deg);left:15px;
+       }
+       .nex.active .toggle span:nth-child(2) {
+        transform: rotate(45deg);left: -5px;
+       }
+       .nex.inactive {
+            display: none;visibility: hidden;
+       }
+       .nex.active::before {
+        content: '';position: relative;top: 0;left: 0;width: 200px;height: 200px;background: #f00;border-radius: 50%;
+       }
+       .nex.active::after {
+        content: '';position: relative;top: 30px;left: -40px;width: 200px;height: 200px;background: #fef;border-radius: 50%;
+       }
+       .nex.active ul {backdrop-filter: blur(20px);border-radius: 10px;
+        position: absolute;top: 7%;left: 6%;width:60%;height: 80%;display: inline-block;justify-content: center;align-items: center;overflow: hidden;z-index: 1;
+       }
+       .nex.active ul li {
+        position: relative;display: flex;width: 100px;height: 80px;left: 25%;
+        list-style-type: none;margin: 10px 20px;justify-content: center;align-items: center;
+       }
+       .nex.active ul li a {transition: 0.5s;
+        text-decoration: none;color: #fff;font-family: hihihi;font-size: 2em;
+       }
+       .nex.active ul li a:hover {
+        font-size: 2.3em;letter-spacing: 3px;
+       }
+       .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .spinner {
+        width: 100px;
+        height: 100px;
+        perspective: 800px; /* Set perspective */
+      }
+      
+      .cube1, .cube2 {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        position: absolute;
+        animation: rotate 1.6s infinite ease-in-out; /* Animation */
+      }
+      
+      .cube1 {
+        transform: rotate3d(1, 1, 0, 0deg);
+      }
+      
+      .cube2 {
+        transform: rotate3d(1, 1, 0, 90deg);
+      }
+      
+      @keyframes rotate {
+        0%, 100% {
+          transform: rotate3d(1, 1, 0, 0deg);
+        }
+        50% {
+          transform: rotate3d(1, 1, 0, 180deg);
+        }
+      }
+      @media (max-width:612px) {
+        .first {display: flex;
+            height: 200vh;
+            flex-wrap: wrap;justify-content: center;
+        }.first .one {
+            width: 100%;height: 50%;
+        }
+        .first .two {
+            width: 100%;
+        }
+        .first .two .imgbo img {top:10px;
+            left: 20px;max-height: 50%;
+        }
+        .second .al .boxes .er {
+            margin: 5px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: none;
+        }.second .al .tick {
+            padding: 30px;
+        }
+        
+      }
+      @media (max-width:390px) {
+        .first {display: flex;
+            height: 250vh;
+            flex-wrap: wrap;justify-content: center;
+        }
+        .first .one {
+            width: 100%;height:60%;
+        }
+        .first .two .imgbo img {
+            max-height: 40%;
+        }
+      }
+      .preloader .text {text-align: center;
+        animation: preone 2s linear forwards;padding: 10px;margin: 10px;
+        position: absolute;font-size: 3em;letter-spacing: 3px;font-family: hihihi;
+      }
+      .preloader .text1 {text-align: center;
+        animation: preone1 2s linear forwards;padding: 10px;margin: 10px;
+        position: absolute;font-size: 3em;letter-spacing: 3px;font-family: hihihi;
+      }
+      @keyframes preone {
+        0% {
+            top: 0;left: 50%;width:20%;height: 100%;color:transparent;
+        }
+        50% {
+            top: 0;left: 20%;width: 80%;height: 100%;color:transparent;
+        }
+        100% {top: 10%;left: 0;width: 100%;height: 100%;color: #fff;
+        }
+      }
+      @keyframes preone1 {
+        0% {
+            top: 0;left: 50%;width:20%;height: 100%;color:transparent;
+        }
+        50% {
+            top: 0;left: 20%;width: 80%;height: 100%;color:transparent;
+        }
+        100% {top: 70%;left: 0;width: 100%;height: 100%;color: #fff;
+        }
+      }
+    </style>
+</head>
+<body>
+    <!-- Made by Ravula Akshith -->
+  <div class="preloader">
+      <div class="spinner">
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+      </div>
+      <div class="text">Master</div>
+      <div class="text1">Loading...</div>
+    </div>
+    <div class="forall active" id="forall">
+        <header class="header">
+            <div class="logo">Portfolio</div>
+            <ul class="list" id = "list">
+                <li><a href="#first">Home</a></li>
+                <li><a href="#second">About</a></li>
+                <li><a href="#third">Portfolio</a></li>
+                <li><a href="#fourth">Contact</a></li>
+            </ul>
+            <div class="toggle" id="toggle" onclick="ab()">
+                <span class="you0"></span>
+                <span class="you1"></span>
+                <span class="you2"></span>
+            </div>
+        </header>
+        <section class="first" id ="first">
+            <div class="one">
+                <div class="text" data-aos="fade-up"
+                data-aos-duration="3000">
+                    <h1>Iam A Designer</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae minus ducimus, culpa suscipit amet ut est voluptatem quasi quibusdam aut, vel id quas optio sunt odit dolorem dolor odio harum!</p>
+                </div>
+            </div>
+            <div class="two">
+                <div class="imgbo" style="width:100%;border:none;">
+                    <iframe src="http://localhost:8080/" title="Template" style="position:relative;top:0;left:0;width:100%;height:100%;object-fit:cover;border:none;"></iframe>
+                </div>
+            </div>
+        </section>
+        <!-- Made by Ravula Akshith -->
+        <section class="second" id="second">
+            <div class="tex" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
+                <h1>About Me</h1>
+                <p>Hello Everyone, this is akshith presenting you</p>
+            </div>
+            <div class="al">
+                <div class="boxes">
+                    <div class="er">
+                        <div class="box a1" data-aos="fade-up-right">
+                            <img src="images\icon2.png" alt="">
+                            <h5>Web Development</h5>
+                        </div>
+                        <div class="box a2" data-aos="fade-up-right">
+                            <img src="images\icon1.png" alt="">
+                            <h5>Web Design</h5>
+                        </div>
+                        <div class="box a3" data-aos="fade-up-right">
+                            <img src="images\icon3.png" alt="">
+                            <h5>Android Apps</h5>
+                        </div>
+                        <div class="box a4" data-aos="fade-up-right">
+                            <img src="images\icon4.png" alt="">
+                            <h5>Videos</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="tick">
+                    <div class="tess" data-aos="fade-up-left">
+                        <h1>Hello Everyone, this is Akshith presenting you the website of my portfolio. In this page i will discuss about me</h1>
+                        <p>&#x2714; Educated from top university</p>
+                        <p>&#x2714; Master of computer science</p>
+                        <p>&#x2714; Gonna be a web developer</p>
+                        <p>&#x2714; Interested in android apps</p>
+                        <p>&#x2714; Interested in web apps</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="third" id="third">
+            <h1 class="one" data-aos="fade-down">My Works</h1>
+            <div class="thirdra">
+                <div class="no chi" data-aos="fade-up-right">
+                    <img src="images\web1.PNG" alt="">
+                    <span class="shew">First One</span>
+                </div>
+                <div class="no chi" data-aos="fade-up-left">
+                    <img src="images\web2.PNG" alt="">
+                    <span class="shew">Second One</span>
+                </div>
+                <div class="no chi" data-aos="fade-up-right">
+                    <img src="images\web3.PNG" alt="">
+                    <span class="shew">Third One</span>
+                </div>
+                <div class="no chi" data-aos="fade-up-left">
+                    <img src="images\web4.PNG" alt="">
+                    <span class="shew">Fourth One</span>
+                </div>
+                <div class="no chi" data-aos="fade-up-right">
+                    <img src="images\web5.PNG" alt="">
+                    <span class="shew">Fifth One</span>
+                </div>
+                <div class="no chi" data-aos="fade-up-left">
+                    <img src="images\web6.PNG" alt="">
+                    <span class="shew">Sixth One</span>
+                </div>
+                <div class="no chi" data-aos="fade-up-right">
+                    <img src="images\web7.PNG" alt="">
+                    <span class="shew">Seventh One</span>
+                </div>
+                <div class="no chi" data-aos="fade-up-left">
+                    <img src="images\web8.PNG" alt="">
+                    <span class="shew">Eigth One</span>
+                </div>
+                <div class="no chi" data-aos="fade-up-right">
+                    <img src="images\web9.PNG" alt="">
+                    <span class="shew">Ninth One</span>
+                </div>
+                <div class="no chi" data-aos="fade-up-left">
+                    <img src="images\web10.PNG" alt="">
+                    <span class="shew">Tenth One</span>
+                </div>
+            </div>
+        </section>
+        <section class="fourth" id="fourth">
+            <h1 class="fori">Contact Me</h1>
+            <div class="conti">
+                <div class="cond">
+                    <h1>What other's say about me </h1>
+                    <div class="pi">
+                        <div class="ope" data-aos="fade-up-right">
+                            <div class="pp">
+                                <img src="images\pexels-daniel-xavier-1239288.jpg" alt="">
+                            </div>
+                            <p>He is a good guy</p>
+                        </div>
+                        <div class="ope" data-aos="fade-up-left">
+                            <div class="pp">
+                                <img src="images\pexels-ali-madad-sakhirani-997489.jpg" alt="">
+                            </div>
+                            <p>He is very intelligent</p>
+                        </div>
+                        <div class="ope" data-aos="fade-up">
+                            <div class="pp">
+                                <img src="images\pexels-pixabay-157661.jpg" alt="">
+                            </div>
+                            <p>He is a smart guy</p>
+                        </div>
+                        <div class="ope" data-aos="fade-down">
+                            <div class="pp">
+                                <img src="images\pexels-raul-reynoso-673546.jpg" alt=''>
+                            </div>
+                            <p>very efficient guy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mis">
+                    <div class="po">
+                        <div class="signup" onclick="toggleElements()" data-aos="fade-up">Sign Up</div><span class="y">|</span>
+                        <div class="signin" onclick="toggleElements()" data-aos="fade-down">Sign In</div>
+                    </div>
+                    <div class="ou inactive" id="ou" data-aos="fade-up-left">
+                        <form action="">
+                            <input type="text" placeholder="First Name" required><br>
+                            <input type="text" placeholder="Last Name" required><br>
+                            <input type="number" placeholder="Phone Number" required><br>
+                            <input type="email" placeholder="Email Address" required><br>
+                            <input type="text" placeholder="Set a Password" required><br>
+                            <input type="text" placeholder="Confirm Password" required><br>
+                            <label for=""><input type="checkbox" name="" id="">I agree to the terms and conditions</label><br>
+                            <label for=""><input type="checkbox" name="" id="">I want to receive special offers</label><br>
+                            <label for=""><input type="submit" value="Submit"></label><br>
+                        </form>
+                    </div>
+                    <div class="pu active" id="pu" data-aos="fade-up-left">
+                        <form action="">
+                            <input type="text" name="user" id="" placeholder="Username" required><br>
+                            <input type="text" name="user" id="" placeholder="Password" required><br>
+                            <label for=""><input type="submit" value="Login"></label><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="fifth">
+            <div class="nova">
+                <h1>My Skills</h1>
+                <p>Web Designing</p>
+                <p>App Designer</p>
+                <p>Coder</p>
+                <p>developer</p>
+            </div>
+            <div class="nova" style="display: flex;text-align:center;flex-wrap:wrap;">
+                <h1>Download CV</h1>
+                <a href="#" class="butt">Download</a>
+            </div>
+            <div class="nova">
+                <h1>Resources</h1>
+                <p>Pexels</p>
+                <p>Pixabay</p>
+                <p>My Files</p>
+            </div>
+            <div class="nova">
+                <h1>Connect</h1>
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Discord</p>
+            </div>
+            <div class="nova">
+                <div class="io">
+                    <img src="images\pexels-samad-ismayilov-735552.jpg" alt="">
+                </div>
+                <p>@Copyright 2024</p>
+                <p style="letter-spacing: 2px;font-weight:900;font-family:ooh;">BY :- <span style="font-family:My;"> Akshith</span></p>
+            </div>
+        </section>
+    </div>
+    <div class="nex inactive" id="nex">
+        <div class="toggle" id="toggle" onclick="ab()">
+            <span class="a0"></span><span class="a1"></span>
+        </div>
+        <ul class="oo">
+            <li><a href="#first"  onclick="ab()">Home</a></li><br>
+            <li><a href="#second"  onclick="ab()">About</a></li><br>
+            <li><a href="#third"  onclick="ab()">Portfolio</a></li><br>
+            <li><a href="#fourth"  onclick="ab()">Contact</a></li><br>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript">
+        AOS.init();
+        function toggleElements() {
+            var element1 = document.getElementById('ou');
+            var element2 = document.getElementById('pu');
+            element1.classList.toggle('active');
+            element1.classList.toggle('inactive');
+            element2.classList.toggle('active');
+            element2.classList.toggle('inactive');
+          }
+          function ab(){
+            var dre = document.getElementById("forall");
+            var dress = document.getElementById("nex");
+            dre.classList.toggle('active');
+            dre.classList.toggle('inactive');
+            dress.classList.toggle('active');
+            dress.classList.toggle('inactive');
+          }
+          window.addEventListener('load', function() {
+            // Get the preloader element
+            var preloader = document.querySelector('.preloader');
+            
+            // Hide the preloader
+            preloader.style.display = 'none';
+          });
+    </script>
+    <!-- Made by Ravula Akshith -->
+</body>
+</html>
