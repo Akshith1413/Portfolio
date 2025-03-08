@@ -61,4 +61,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ### 3) Open the ```index.html``` which is located in the root
 ### 4) Enjoy my Portfolio with interactivey and responsiveness
 
+&nbsp;
+
 ## Job Offers Please Dm me 😊 Ready to Work
