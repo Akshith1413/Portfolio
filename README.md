@@ -1,4 +1,4 @@
-# Three Webpack Boilerplate
+# My Portfolio
 
 For this project i used Three webpack 5 boilerplate using Babel, PostCSS, Sass and Gsap.
 
@@ -51,7 +51,7 @@ cd dist && http-server
 
 This project is open source and available under the [MIT License](LICENSE). 
 
-# Modified by
+# Made by
 - Ravula Akshith
 
 ## The things you need to after those above steps
