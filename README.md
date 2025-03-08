@@ -1,8 +1,8 @@
 # Three Webpack Boilerplate
 
-Three webpack 5 boilerplate using Babel, PostCSS, Sass and Gsap.
+For this project i used Three webpack 5 boilerplate using Babel, PostCSS, Sass and Gsap.
 
-## Installation
+## Get Ready
 
 Clone this repo and npm install.
 
